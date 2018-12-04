@@ -7,7 +7,7 @@ Course on Linux containers for scientific environments
 
 * Introduction to Docker
 
-* Docker Hub. Linux and its diversity. Example to different images.
+* Docker Hub. Linux and its diversity. Example to different images. Tags
 
 * Hands-on testing different images
 
@@ -15,11 +15,16 @@ Course on Linux containers for scientific environments
 
 * Creating Dockerfiles
 
-* Hands-on testing different installation methods
+* Hands-on testing of different installation methods
+
+    * Examples
+        * NCBI Blast+
+        * https://github.com/c-omics/trimmomatic
+        * To be done: Samtools
 
 * Volumes
 
-* Hands-on testing different images and volumes
+* Hands-on testing of different images and volumes
 
 * Services
 
@@ -27,23 +32,34 @@ Course on Linux containers for scientific environments
 
 * Different approaches to daemons and services
 
+* Hands-on with services
+
+    * NCBI Blast+ with PHP script
+    * Repeat the same with Samtools
+    * Shiny App examples
+        * https://github.com/LJI-Bioinformatics/Shiny-PCA-Maker
+        * https://github.com/philippmuench/Donut
+    
 * Exporting containers into images
 
-* Hands-on, preparing own example
+* Hands-on, preparing your own example
 
 ## Session 2
 
 * Sum-up last session
 
-* Putting containers working together
+* Putting containers to work together
 
 * Hands-on example
+
+    * NCBI Blast+ with PHP script + MySQL database
+    * Repeat the same with Samtools
 
 * Docker compose
 
 * Hands-on example
 
-* Contributing back images. Automated images with Github
+* Contributing back your own images. Automated images with Github
 
 * Introduction to singularity. Differences with Docker
 
@@ -55,9 +71,9 @@ Course on Linux containers for scientific environments
 
 * Hands-on executing images
 
-* Singularity files. Custom building Singularity images
+* Singularity files. Custom building of Singularity images
 
-* Hands-on building Singularity
+* Hands-on building of Singularity images
 
 * Using Docker for building Singularity files
 
@@ -67,5 +83,5 @@ Course on Linux containers for scientific environments
 
 * Hands-on services with Singularity
 
-* Sum-up course, finish preparing own example
+* Sum-up course, finish preparing your own example
 
