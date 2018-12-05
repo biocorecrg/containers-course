@@ -1,0 +1,9 @@
+FROM continuumio/miniconda3:4.5.11
+
+# File Author / Maintainer
+MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu> 
+
+ARG BLAST_VERSION=2.5.1
+
+# https://bioconda.github.io/recipes/blast/README.html
+RUN conda install -c bioconda blast=${BLAST_VERSION}

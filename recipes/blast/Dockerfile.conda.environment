@@ -1,0 +1,10 @@
+FROM continuumio/miniconda:4.5.4
+
+# File Author / Maintainer
+MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu> 
+
+# https://bioconda.github.io/recipes/blast/README.html
+COPY environment.yml /
+RUN conda env create -f /environment.yml && conda clean -a
+ENV PATH /opt/conda/envs/blast-conda/bin:$PATH
+

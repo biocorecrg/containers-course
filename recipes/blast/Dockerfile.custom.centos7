@@ -1,0 +1,21 @@
+FROM centos:7
+
+# File Author / Maintainer
+MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu> 
+
+ARG BLAST_VERSION=2.7.1
+
+RUN yum update; yum install -y curl perl perl-Archive-Tar perl-Digest-MD5 perl-List-MoreUtils;
+
+RUN cd /usr/local; curl --fail --silent --show-error --location --remote-name ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${BLAST_VERSION}/ncbi-blast-${BLAST_VERSION}+-1.x86_64.rpm
+
+# Workdir here
+WORKDIR /usr/local
+RUN set -x; rpm --install ncbi-blast-${BLAST_VERSION}+-1.x86_64.rpm && rm ncbi-blast-${BLAST_VERSION}+-1.x86_64.rpm
+
+# Default location of BLAST databases
+VOLUME /blastdb
+ENV BLASTDB /blastdb
+
+# Clean cache
+RUN yum clean all
