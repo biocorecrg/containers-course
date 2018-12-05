@@ -1,3 +1,5 @@
+# Creating images
+
 docker build -t blast-debian .
 docker build -t blast-debian -f Dockerfile.simple .
 docker build -t blast-debian-stretch -f Dockerfile.stretch .
@@ -11,4 +13,8 @@ docker build -t blast-conda:environment -f Dockerfile.conda.environment .
 
 # Non-working example below
 docker build -t blast-alpine:custom -f Dockerfile.custom.alpine .
+
+# Formating databases
+
+docker run -v /db/test:/blastdb  blast-debian:custom makeblastdb -dbtype prot -parse_seqids -in /blastdb/swissprot
 
