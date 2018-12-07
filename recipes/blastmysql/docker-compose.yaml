@@ -1,0 +1,13 @@
+version: '3'
+services:
+    myblast:
+        build: .
+        ports:
+            - 8089:8081
+    mysql:
+        image: "mariadb:10.1"
+        environment:
+            MYSQL_ROOT_PASSWORD: "root123"
+            MYSQL_DATABASE: "blast" 
+            MYSQL_USER: "blast"
+            MYSQL_PASSWORD: "blast123"
