@@ -6,7 +6,7 @@ $blastdb = "/blastdb";
 $db = "swissprot";
 $dbtype = "prot";
 
-$dbconfig = "/conf/mysql.json";
+$dbconfig = "/config/mysql.json";
 
 $conf = json_decode( $dbconfig, true );
 
