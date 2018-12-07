@@ -16,7 +16,7 @@ VOLUME /blastdb
 ENV BLASTDB /blastdb
 
 # Now adding web stuff
-RUN apt-get install -y php-cli
+RUN apt-get install -y php-cli php-mysql
 
 RUN mkdir /wwww
 WORKDIR /wwww

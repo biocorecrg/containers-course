@@ -8,7 +8,7 @@ $dbtype = "prot";
 
 $dbconfig = "/config/mysql.json";
 
-$conf = json_decode( $dbconfig, true );
+$conf = json_decode( file_get_contents( $dbconfig ), true );
 
 
 if ( array_key_exists( "id", $_REQUEST ) ) {
@@ -40,6 +40,7 @@ if ( array_key_exists( "id", $_REQUEST ) ) {
         
         # Insert table
         $insert = mysqli_prepare( $link, "INSERT INTO `visits` ( `id` ) VALUES ( ? ) ;" );
+		mysqli_stmt_bind_param( $insert, "s", $id );
         mysqli_stmt_execute( $insert );
 
         mysql_close($link);
