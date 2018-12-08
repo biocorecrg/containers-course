@@ -21,6 +21,7 @@ if ( array_key_exists( "id", $_REQUEST ) ) {
     
     $output = shell_exec("$blastdbcmd -dbtype $dbtype -db $blastdb/$db -entry $id");
     
+    header('Content-Type: text/plain');
     echo $output;
     
     if ( $conf && array_key_exists( "host", $conf ) ) {
@@ -40,14 +41,35 @@ if ( array_key_exists( "id", $_REQUEST ) ) {
         
         # Insert table
         $insert = mysqli_prepare( $link, "INSERT INTO `visits` ( `id` ) VALUES ( ? ) ;" );
-		mysqli_stmt_bind_param( $insert, "s", $id );
+        mysqli_stmt_bind_param( $insert, "s", $id );
         mysqli_stmt_execute( $insert );
-
-        mysql_close($link);
+        
+        mysqli_close($link);
     }
 
+} elseif ( array_key_exists( "list", $_REQUEST ) ) {
+
+    # Proceed MySQL Loading     
+    $link = mysqli_connect( $conf['host'], $conf['user'], $conf['passwd'], "blast" );
+    
+    /* check connection */
+    if (mysqli_connect_errno()) {
+        printf("Connect failed: %s\n", mysqli_connect_error());
+        exit();
+    }
+    
+    # Create table
+    $select = mysqli_query( $link, "SELECT * from visits;" );
+    /* associative array */
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    
+    header('Content-Type: application/json');
+    echo json_encode( $row );
+    
+    
 } else {
     
+    header('Content-Type: text/plain');
     echo "Nothing to see here";
 
 }

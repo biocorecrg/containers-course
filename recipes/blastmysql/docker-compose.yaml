@@ -1,9 +1,14 @@
 version: '3'
 services:
     myblast:
-        build: .
+        build:
+            context: ../../
+            dockerfile: recipes/blastmysql/Dockerfile
         ports:
             - 8089:8081
+        volumes:
+            - /db/test:/blastdb
+            - ./config.json:/config/mysql.json
     mysql:
         image: "mariadb:10.1"
         environment:
@@ -11,3 +16,5 @@ services:
             MYSQL_DATABASE: "blast" 
             MYSQL_USER: "blast"
             MYSQL_PASSWORD: "blast123"
+        volumes:
+            - /tmp/data/db:/var/lib/mysql
