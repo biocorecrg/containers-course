@@ -60,11 +60,13 @@ if ( array_key_exists( "id", $_REQUEST ) ) {
     
     # Create table
     $select = mysqli_query( $link, "SELECT * from visits;" );
-    /* associative array */
-    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    
+    while($row = mysqli_fetch_array($select, MYSQLI_ASSOC)){
+        $rows[] = $row;
+    }
     
     header('Content-Type: application/json');
-    echo json_encode( $row );
+    echo json_encode( $rows );
     
     
 } else {
