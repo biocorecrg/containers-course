@@ -19,8 +19,8 @@ Course on Linux containers for scientific environments
 
     * Examples
         * NCBI Blast+
-        * https://github.com/c-omics/trimmomatic
-        * To be done: Samtools
+        * Exercise: Trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
+        * Exercise: Samtools (http://www.htslib.org/)
 
 * Volumes
 
