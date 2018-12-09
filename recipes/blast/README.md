@@ -20,6 +20,6 @@ docker run -v /db/test:/blastdb  blast-debian:custom makeblastdb -dbtype prot -p
 
 # Singularity
 
-sudo singularity build blast.img Singularity
+sudo singularity build blast.simg Singularity
 
 
