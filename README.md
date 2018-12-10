@@ -7,7 +7,7 @@ Course on Linux containers for scientific environments
 
 * Introduction to Docker
 
-* Docker Hub. Linux and its diversity. Example to different images. Tags
+* [Docker Hub](https://hub.docker.com/). Linux and its diversity. Example to different images. Tags
 
 * Hands-on testing different images
 
@@ -23,6 +23,8 @@ Course on Linux containers for scientific environments
         * Exercise: Samtools (http://www.htslib.org/)
 
 * Volumes
+   
+   * Using Database. Example: Swissprot from NCBI - [FASTA files](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/)
 
 * Hands-on testing of different images and volumes
 
