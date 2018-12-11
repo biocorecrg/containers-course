@@ -17,5 +17,5 @@ list_files <- list(file1, file2)
 names(list_files) <- c(basename(arg1), basename(arg2))
 
 # Plot Venn Diagram
-venn.diagram(list_files, imagetype="png", filename=paste0("/output/",basename(arg1), "_", basename(arg2), ".png"))
+venn.diagram(list_files, imagetype="png", filename=paste0("/output/",basename(arg1), "_", basename(arg2), ".png"), fill=c("lightblue", "lightgreen"))
 
