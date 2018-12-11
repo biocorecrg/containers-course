@@ -11,6 +11,8 @@ Course on Linux containers for scientific environments. [Slides](https://slides.
 
 * Hands-on testing different images
 
+* Exporting containers into tar files and importing them back
+
 * Introduction to software installation
 
 * Creating Dockerfiles
@@ -24,6 +26,7 @@ Course on Linux containers for scientific environments. [Slides](https://slides.
         * Exercise: Samtools (http://www.htslib.org/)
 
 * Volumes
+
    * Using sequences. From http://www.uniprot.org
    
    * Using Database. Example: Swissprot from NCBI - [FASTA files](http://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/)
@@ -39,13 +42,11 @@ Course on Linux containers for scientific environments. [Slides](https://slides.
 * Hands-on with services
 
     * NCBI Blast+ with PHP script
-    * Repeat the same with Samtools
-    * Shiny App examples
+    * Exercise: Repeat the same with Samtools or Trimmomatic
+    * Exercise: Play with Shiny App examples
         * https://github.com/LJI-Bioinformatics/Shiny-PCA-Maker
         * https://github.com/philippmuench/Donut
     
-* Exporting containers into images
-
 * Hands-on, preparing your own example
 
 ## Session 2
