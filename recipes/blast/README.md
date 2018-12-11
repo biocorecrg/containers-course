@@ -65,4 +65,12 @@ docker run -v /db/test:/blastdb  blast-debian:custom blastdbcmd -dbtype prot -db
 
 sudo singularity build blast.simg Singularity
 
+singularity run blast.simg
+
+singularity run blast.simg -h
+
+singularity exec blast.simg blastp -h
+
+singularity -B /db/test:/blastdb blast.simg
+
 
