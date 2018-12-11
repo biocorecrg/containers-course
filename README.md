@@ -1,5 +1,5 @@
 # containers-course
-Course on Linux containers for scientific environments
+Course on Linux containers for scientific environments. [Slides](https://slides.com/similis/introduction-linux-containers-training/)
 
 ## Session 1
 
@@ -19,12 +19,14 @@ Course on Linux containers for scientific environments
 
     * Examples
         * NCBI Blast+
+        * Venn Diagram R script
         * Exercise: Trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
         * Exercise: Samtools (http://www.htslib.org/)
 
 * Volumes
+   * Using sequences. From http://www.uniprot.org
    
-   * Using Database. Example: Swissprot from NCBI - [FASTA files](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/)
+   * Using Database. Example: Swissprot from NCBI - [FASTA files](http://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/)
 
 * Hands-on testing of different images and volumes
 
