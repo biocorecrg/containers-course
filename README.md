@@ -1,5 +1,7 @@
 # containers-course
-Course on Linux containers for scientific environments. [Slides](https://slides.com/similis/introduction-linux-containers-training/)
+Course on Linux containers for scientific environments. 
+December 11-12, 2018. CRG, Barcelona, Spain.
+[Slides](https://slides.com/similis/introduction-linux-containers-training/)
 
 ## Session 1
 
@@ -48,6 +50,7 @@ Course on Linux containers for scientific environments. [Slides](https://slides.
         * https://github.com/philippmuench/Donut
     
 * Hands-on, preparing your own example
+
 
 ## Session 2
 
