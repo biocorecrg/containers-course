@@ -3,6 +3,7 @@ Course on Linux containers for scientific environments.
 
 ## Editions 
 
+* June 13-14, 2019. CRG, Barcelona, Spain. [Slides](https://slides.com/similis/introduction-linux-containers-training/) and training by Carlos Eduardo Arango Gutierrez
 * January 28-29, 2019. CRG, Barcelona, Spain. [Slides](https://slides.com/similis/introduction-linux-containers-training/) and Web seminar by [Dave Godlove](https://github.com/GodloveD) ([associated material](https://singularity-tutorial.github.io/))
 * December 11-12, 2018. CRG, Barcelona, Spain. [Slides](https://slides.com/similis/introduction-linux-containers-training/)
 
@@ -29,8 +30,8 @@ Course on Linux containers for scientific environments.
     * Examples
         * NCBI Blast+
         * Venn Diagram R script
-        * Exercise: Trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
-        * Exercise: Samtools (http://www.htslib.org/)
+        * Possible exercise: Trimmomatic (http://www.usadellab.org/cms/?page=trimmomatic)
+        * Possible exercise: Samtools (http://www.htslib.org/)
 
 * Volumes
 
@@ -49,8 +50,8 @@ Course on Linux containers for scientific environments.
 * Hands-on with services
 
     * NCBI Blast+ with PHP script
-    * Exercise: Repeat the same with Samtools or Trimmomatic
-    * Exercise: Play with Shiny App examples
+    * Possible exercise: Repeat the same with Samtools or Trimmomatic
+    * Possible exercise: Play with Shiny App examples
         * https://github.com/LJI-Bioinformatics/Shiny-PCA-Maker
         * https://github.com/philippmuench/Donut
     
