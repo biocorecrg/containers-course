@@ -1,0 +1,13 @@
+title: Biocore's Scientific Containers Course 2019
+description: Introduction to container technologies for scientific profiles
+url: "https://biocorecrg.github.io/containers-course/" 
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
+
+sass:
+  sass_dir: _sass
+  style: compressed
