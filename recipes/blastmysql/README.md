@@ -6,14 +6,14 @@ docker run --name db -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_DATABASE=blast -e M
 
 docker build -t blastmysql -f Dockerfile ../../
 
-docker run -d -v /db/test:/blastdb -v $(pwd)/config.json:/config/mysql.json -p 8089:8081 --name myblast --link db:mysql blastmysql
+docker run -d -v /home/user/db:/blastdb -v $(pwd)/config.json:/config/mysql.json -p 8089:8081 --name myblast --link db:mysql blastmysql
 
 
 # Singularity
 
 sudo singularity build blastmysql.sif Singularity
 
-singularity run -B /db/test:/blastdb -B $(pwd)/config.json:/config/mysql.json blastmysql.sif
+singularity run -B /home/user/db:/blastdb -B $(pwd)/config.json:/config/mysql.json blastmysql.sif
 
 sudo singularity build mysql.sif Singularity.mysql
 
@@ -25,7 +25,7 @@ singularity instance.list
 
 singularity exec instance://mysql mysql -uroot -h127.0.0.1 -e "CREATE DATABASE blast; GRANT ALL PRIVILEGES on blast.* TO 'blast'@'%' identified by 'blast123' ;"
 
-singularity instance.start -B /db/test:/blastdb -B $(pwd)/config.local.json:/config/mysql.json blastmysql.sif blast
+singularity instance.start -B /home/user/db:/blastdb -B $(pwd)/config.local.json:/config/mysql.json blastmysql.sif blast
 
 singularity instance.list
 
