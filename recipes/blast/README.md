@@ -29,25 +29,25 @@ We need to have /blastdb VOLUME defined in the Dockerfile recipe
 
 ## Alignment of sequences
 
-Let's download sequences in a directory, e. g., /db/test
+Let's download sequences in a directory, e. g., /home/user/db
 
-cd /db/test
+cd /home/user/db
 
 curl https://www.uniprot.org/uniprot/O75976.fasta -o O75976.fasta
 
 curl https://www.uniprot.org/uniprot/Q90240.fasta -o Q90240.fasta
 
-docker run -v /db/test:/blastdb blast-debian:custom blastp -query /blastdb/O75976.fasta -subject /blastdb/Q90240.fasta
+docker run -v /home/user/db:/blastdb blast-debian:custom blastp -query /blastdb/O75976.fasta -subject /blastdb/Q90240.fasta
 
-docker run -v /db/test:/blastdb blast-debian:custom blastp -query /blastdb/O75976.fasta -subject /blastdb/Q90240.fasta > out.blast
+docker run -v /home/user/db:/blastdb blast-debian:custom blastp -query /blastdb/O75976.fasta -subject /blastdb/Q90240.fasta > out.blast
 
-docker run -v /db/test:/blastdb blast-debian:custom blastp -query /blastdb/O75976.fasta -subject /blastdb/Q90240.fasta -out /blastdb/output.blast
+docker run -v /home/user/db:/blastdb blast-debian:custom blastp -query /blastdb/O75976.fasta -subject /blastdb/Q90240.fasta -out /blastdb/output.blast
 
 ## Retrieving a sequence from a formated FASTA file
 
 Let's download Swissprot
 
-cd /db/test
+cd /home/user/db
 
 curl http://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/swissprot.gz -o swissprot.gz
 
@@ -55,11 +55,11 @@ gunzip swissprot.gz
 
 Let's format the FASTA file
 
-docker run -v /db/test:/blastdb  blast-debian:custom makeblastdb -dbtype prot -parse_seqids -in /blastdb/swissprot
+docker run -v /home/user/db:/blastdb  blast-debian:custom makeblastdb -dbtype prot -parse_seqids -in /blastdb/swissprot
 
 We can retrive a FASTA sequence by ID
 
-docker run -v /db/test:/blastdb  blast-debian:custom blastdbcmd -dbtype prot -db swissprot -entry O75976
+docker run -v /home/user/db:/blastdb  blast-debian:custom blastdbcmd -dbtype prot -db swissprot -entry O75976
 
 # Singularity
 
@@ -71,6 +71,6 @@ singularity run blast.sif -h
 
 singularity exec blast.sif blastp -h
 
-singularity -B /db/test:/blastdb blast.sif
+singularity -B /home/user/db:/blastdb blast.sif
 
 
