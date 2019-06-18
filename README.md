@@ -3,7 +3,7 @@ Course on Linux containers for scientific environments.
 
 ## Editions 
 
-* June 13-14, 2019. CRG, Barcelona, Spain. [Slides](https://slides.com/similis/introduction-linux-containers-training/) and [https://github.com/ArangoGutierrez/Singularity-tutorial hands-on repository by Carlos Eduardo Arango Gutierrez]
+* June 13-14, 2019. CRG, Barcelona, Spain. [Slides](https://slides.com/similis/introduction-linux-containers-training/) and [hands-on repository by Carlos Eduardo Arango Gutierrez](https://github.com/ArangoGutierrez/Singularity-tutorial)
 * January 28-29, 2019. CRG, Barcelona, Spain. [Slides](https://slides.com/similis/introduction-linux-containers-training/) and Web seminar by [Dave Godlove](https://github.com/GodloveD) ([associated material](https://singularity-tutorial.github.io/))
 * December 11-12, 2018. CRG, Barcelona, Spain. [Slides](https://slides.com/similis/introduction-linux-containers-training/)
 
